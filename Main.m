@@ -12,7 +12,10 @@ creer_dossier_base_ref(rep,fin,nb_images_ref);
 rep_ref = 'baseRef/';
 
 %% feature extraction --- color
-[sig,nom,tab] = signatures_images_ref(rep_ref,'histogrammeSwainBallard',fin,nb_images_ref);
+[sig_c,nom_c,tab_c] = signatures_images_ref(rep_ref,'histogrammeSwainBallard',fin,nb_images_ref);
+
+%% feature extraction --- texture
+[sig_t,nom_t,tab_t] = signatures_images_ref(rep_ref,'histogrammeLBP',fin,nb_images_ref);
 
 
 % %% feature extraction
